@@ -35,7 +35,6 @@ jobs:
       - name: Lost Pixel
         id: lp
         uses: lost-pixel/lost-pixel@v3.8.0
-        id: lp
         env:
           LOST_PIXEL_CONFIG_DIR: "./examples"
           LOST_PIXEL_MODE: update
