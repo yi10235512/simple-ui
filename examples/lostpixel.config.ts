@@ -2,7 +2,7 @@ import { CustomProjectConfig } from 'lost-pixel';
 
 export const config: CustomProjectConfig = {
  customShots: {
-    currentShotsPath: "./cypress/screenshots",
+    currentShotsPath: "./examples/cypress/screenshots",
   },
   generateOnly: true,
   failOnDifference: true
