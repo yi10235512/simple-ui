@@ -1,4 +1,4 @@
 <template>
-  <s-button>aaa</s-button>
-  <s-button>bbb</s-button>
+  <button>aaa</button>
+  <button>bbb</button>
 </template>

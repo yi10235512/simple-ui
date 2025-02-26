@@ -1,1 +1,0 @@
-export { SButton } from './button';

@@ -3,5 +3,9 @@
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview"
+  },
+  "dependencies": {
+    "@vue/theme": "^2.3.0",
+    "markdown-it": "^14.1.0"
   }
 }
