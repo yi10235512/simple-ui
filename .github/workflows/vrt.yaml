@@ -1,0 +1,38 @@
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Lost Pixel
+    strategy:
+      matrix:
+        node-version: [20]
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: before script
+        run: cd examples &
+
+      - name: Run app
+        run: npm run dev &
+
+      - name: Run Cypress
+        run: npm run cy:run
+
+      - name: Lost Pixel
+        uses: lost-pixel/lost-pixel@v3.8.0
+        env:
+          LOST_PIXEL_CONFIG_DIR: "./examples"
